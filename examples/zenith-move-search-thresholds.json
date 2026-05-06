@@ -1,0 +1,17 @@
+{
+  "repo": "zenith-move-search-flow",
+  "thresholds": {
+    "signal": 3,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 196,
+    "watch": 100
+  },
+  "terms": [
+    "position pressure",
+    "move ordering",
+    "search width",
+    "endgame risk"
+  ]
+}
