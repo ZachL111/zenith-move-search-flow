@@ -1,0 +1,73 @@
+{
+  "repo": "zenith-move-search-flow",
+  "language": "Elixir",
+  "category": "Chess and game engines",
+  "goal": "Build an Elixir toolkit that studies search behavior through append-only fixtures, with checkpoint recovery checks and bounded memory input sets.",
+  "review_model": {
+    "terms": [
+      "position pressure",
+      "move ordering",
+      "search width",
+      "endgame risk"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "position pressure",
+      "signal": 52,
+      "slack": 34,
+      "drag": 20,
+      "confidence": 62,
+      "score": 140,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "move ordering",
+      "signal": 80,
+      "slack": 53,
+      "drag": 17,
+      "confidence": 74,
+      "score": 236,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "search width",
+      "signal": 86,
+      "slack": 28,
+      "drag": 15,
+      "confidence": 52,
+      "score": 207,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "endgame risk",
+      "signal": 79,
+      "slack": 53,
+      "drag": 11,
+      "confidence": 71,
+      "score": 249,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "position pressure",
+      "signal": 76,
+      "slack": 39,
+      "drag": 12,
+      "confidence": 51,
+      "score": 206,
+      "lane": "ship"
+    }
+  ]
+}
